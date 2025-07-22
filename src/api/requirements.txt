@@ -1,8 +1,9 @@
+flask_cors
+flask
 pandas
 numpy
 scikit-learn
 ultralytics
 matplotlib
-flask
 pyqt5
 gunicorn
