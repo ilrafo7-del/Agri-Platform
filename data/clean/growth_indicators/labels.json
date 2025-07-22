@@ -1,0 +1,49 @@
+{
+  "img1.jpg": [
+    "wilting",
+    "flowering"
+  ],
+  "img2.jpeg": [
+    "yellow",
+    "green",
+    "seedling"
+  ],
+  "img3.jpg": [
+    "seedling",
+    "flowering",
+    "fruiting"
+  ],
+  "img4.jpg": [
+    "green",
+    "wilting",
+    "seedling",
+    "flowering",
+    "fruiting"
+  ],
+  "img5.jpg": [
+    "seedling"
+  ],
+  "img6.jpg": [
+    "yellow",
+    "wilting"
+  ],
+  "img7.jpg": [
+    "wilting",
+    "seedling",
+    "flowering"
+  ],
+  "img8.jpg": [
+    "green",
+    "wilting"
+  ],
+  "img9.jpg": [
+    "fruiting"
+  ],
+  "img10.jpg": [
+    "wilting",
+    "seedling",
+    "flowering",
+    "fruiting",
+    "green"
+  ]
+}
