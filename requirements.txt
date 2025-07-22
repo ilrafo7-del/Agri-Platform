@@ -5,3 +5,4 @@ ultralytics
 matplotlib
 flask
 pyqt5
+gunicorn
