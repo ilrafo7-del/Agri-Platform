@@ -20,6 +20,8 @@ function ControlDashboard({ updatesEnabled, setUpdatesEnabled }) {
   const [deviceStatus, setDeviceStatus] = useState({});
   const [deviceHealth, setDeviceHealth] = useState({});
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   // جلب بيانات الأعطال والصحة
   useEffect(() => {
     ["pump", "fan"].forEach(device => {
