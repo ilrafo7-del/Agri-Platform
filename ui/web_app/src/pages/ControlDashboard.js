@@ -23,7 +23,7 @@ function ControlDashboard({ updatesEnabled, setUpdatesEnabled }) {
   // جلب بيانات الأعطال والصحة
   useEffect(() => {
     ["pump", "fan"].forEach(device => {
-      fetch("http://127.0.0.1:5000/predict-fault", {
+      fetch(`${API_URL}/predict-fault`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({plant: selectedPlant, device})
@@ -34,13 +34,13 @@ function ControlDashboard({ updatesEnabled, setUpdatesEnabled }) {
   }, [selectedPlant, updatesEnabled]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/device-status?plant=${selectedPlant}`)
+    fetch(`${API_URL}/device-status?plant=${selectedPlant}`)
       .then(res => res.json())
       .then(data => setDeviceStatus(data));
   }, [selectedPlant, updatesEnabled]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/device-health?plant=${selectedPlant}`)
+    fetch(`${API_URL}/device-health?plant=${selectedPlant}`)
       .then(res => res.json())
       .then(data => setDeviceHealth(data.health || {}));
   }, [selectedPlant, updatesEnabled]);
