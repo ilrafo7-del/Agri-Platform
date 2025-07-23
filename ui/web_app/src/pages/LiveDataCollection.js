@@ -7,6 +7,8 @@ function LiveDataCollection() {
   const [sensorData, setSensorData] = useState([]);
   const sensorTimer = useRef(null);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   // --- الكاميرا ---
   const [cameraActive, setCameraActive] = useState(false);
   const [autoCamera, setAutoCamera] = useState(false);
@@ -44,7 +46,7 @@ function LiveDataCollection() {
     if (sensorActive) {
       sensorTimer.current = setInterval(() => {
         // هنا ضع كود جلب القيم الحقيقية من السيرفر أو من الراسبيري
-        fetch("http://127.0.0.1:5000/latest-sensor-data?plant=tomato")
+          fetch(`${API_URL}/latest-sensor-data?plant=tomato`)
           .then(res => res.json())
           .then(data => setSensorData(prev => [
             ...prev,
