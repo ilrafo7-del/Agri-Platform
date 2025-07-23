@@ -8,6 +8,8 @@ function PredictDashboard() {
   const [image, setImage] = useState(null);
   const videoRef = useRef();
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   // التقاط صورة من الكاميرا
   const handleCapture = () => {
     const canvas = document.createElement("canvas");
@@ -30,8 +32,8 @@ function PredictDashboard() {
     const formData = new FormData();
     formData.append("plant", plant);
     formData.append("image", image, "live.jpg");
-    formData.append("window_minutes", windowMinutes);
-    const res = await fetch("http://127.0.0.1:5000/smart-decision", {
+    formData.append("window_minutes", windowMinutes);const API_URL = process.env.REACT_APP_API_URL;
+    const res = await fetch(`${API_URL}/smart-decision`, {
       method: "POST",
       body: formData
     });
